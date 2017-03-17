@@ -9,9 +9,15 @@ private:
 	int kecepatan;
 	double jam; // Soal NO 4
 	double detik; // Soal NO 5
+	double kecepatanMS; // Soal NO 6
+	double jarakKm; // Soal NO 7
+	double jarakM; // Soal NO 7
 public:
 	void rubahSekon(double s){ // Soal NO 5
 		detik = s * 3600;
+	}
+	void rubahKecepatan(double i){ // Soal NO 6
+		kecepatanMS = (i*1000)/3600;
 	}
 	void setNoPlat(string s) {
 		noPlat = s;
@@ -24,6 +30,7 @@ public:
 	}
 	void setKecepatan(int i) {
 		kecepatan = i;
+		rubahKecepatan(kecepatan);
 	}
 	void setWaktu(double w) { // Soal NO 4
 		jam = w;
@@ -41,15 +48,18 @@ public:
 	int getKecepatan() {
 		return kecepatan;
 	}
+	double hitungJarak(){
+		return kecepatan * jam;
+	}
 	void displayMessage(){
 		cout << "-------------------------------" << endl;
 		cout << "Mobil anda bermerek \t : " << manufaktur <<
 		endl;
 		cout << "Nomor Plat\t\t : " << noPlat << endl;
 		cout << "Warna\t\t\t : " << warna << endl;
-		cout << "Kecepatan\t\t : " << kecepatan << endl;
-		cout << "Waktu\t\t\t : " << jam << " Jam" << endl; // Soal NO 4
-		cout << "Waktu\t\t\t : " << detik << " Detik" << // Soal NO 5
+		cout << "Kecepatan\t\t : " << kecepatan << " km/h" <<endl; // Soal NO 6
+		cout << "Kecepatan\t\t : " << kecepatanMS << " m/s" <<endl; // Soal NO 6
+		cout << "Jarak yang ditempuh \t : " << hitungJarak() << " Km" << // Soal NO 7
 		endl;
 }
 };
