@@ -2,7 +2,11 @@
 tugas-bab-1-pemlan-a-sadboys created by GitHub Classroom
 
 # Nama Kelompok :   
-- Aviv (145150301111xxx)
-- Muhammad Yaqub (145150301111066)
-- Bimo (135150301111xxx)
+- Fatchullah Wahid A	
+- Muhammad Yaqub 		
+- Bimo Prasetyo 		
 
+# NIM : 
+- 145150301111059
+- 145150301111066
+- 135150300111058
