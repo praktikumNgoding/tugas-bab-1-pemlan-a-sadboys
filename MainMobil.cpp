@@ -7,6 +7,7 @@ private:
 	string warna;
 	string manufaktur;
 	int kecepatan;
+	double waktu; // Soal NO 4
 public:
 	void setNoPlat(string s) {
 		noPlat = s;
@@ -20,6 +21,9 @@ public:
 	void setKecepatan(int i) {
 		kecepatan = i;
 	}
+	void setWaktu(double w) { // Soal NO 4
+		waktu = w;
+	}	
 	string getNoPlat() {
 		return noPlat;
 	}
@@ -38,7 +42,8 @@ public:
 		endl;
 		cout << "Nomor Plat\t\t : " << noPlat << endl;
 		cout << "Warna\t\t\t : " << warna << endl;
-		cout << "Kecepatan\t\t : " << kecepatan <<
+		cout << "Kecepatan\t\t : " << kecepatan << endl;
+		cout << "Waktu\t\t\t : " << waktu << " Jam" <<
 		endl;
 }
 };
@@ -48,6 +53,7 @@ int main() {
 	string warna;
 	string manufaktur;
 	int kecepatan;
+	double waktu;
 	
 	//Input User Mobil Pertama
 	cout<<"Masukkan Merek Mobil ke-1 \t: ";
@@ -62,6 +68,9 @@ int main() {
 	cout<<"Masukkan Kecepatan Mobil ke-1 \t: ";
 	cin>> kecepatan;
 	fflush(stdin);
+	cout<<"Masukkan Waktu (Jam) \t\t: "; // Soal NO 4
+	cin>> waktu;
+	fflush(stdin);
 	
 	//Set Data Mobil Pertama	
 	Mobil *m1 = new Mobil();
@@ -69,6 +78,7 @@ int main() {
 	m1->setManufaktur(manufaktur);
 	m1->setNoPlat(noPlat);
 	m1->setWarna(warna);
+	m1->setWaktu(waktu); // Soal NO 4
 	m1->displayMessage();
 	cout << "-------------------------------" << endl;
 	
@@ -85,6 +95,9 @@ int main() {
 	cout<<"Masukkan Kecepatan Mobil ke-2 \t: ";
 	cin>> kecepatan;
 	fflush(stdin);	
+	cout<<"Masukkan Waktu (Jam) \t\t: "; // Soal NO 4
+	cin>> waktu;
+	fflush(stdin);
 	
 	//Set Data Mobil Kedua	
 	Mobil *m2 = new Mobil();
@@ -92,6 +105,7 @@ int main() {
 	m2->setManufaktur(manufaktur);
 	m2->setNoPlat(noPlat);
 	m2->setWarna(warna);
+	m2->setWaktu(waktu); // Soal NO 4
 	m2->displayMessage();
 	cout << "-------------------------------" << endl;
 	
