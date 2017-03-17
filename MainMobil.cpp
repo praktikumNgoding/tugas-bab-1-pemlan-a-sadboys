@@ -7,8 +7,12 @@ private:
 	string warna;
 	string manufaktur;
 	int kecepatan;
-	double waktu; // Soal NO 4
+	double jam; // Soal NO 4
+	double detik; // Soal NO 5
 public:
+	void rubahSekon(double s){ // Soal NO 5
+		detik = s * 3600;
+	}
 	void setNoPlat(string s) {
 		noPlat = s;
 	}
@@ -22,7 +26,8 @@ public:
 		kecepatan = i;
 	}
 	void setWaktu(double w) { // Soal NO 4
-		waktu = w;
+		jam = w;
+		rubahSekon(jam); // Soal NO 5
 	}	
 	string getNoPlat() {
 		return noPlat;
@@ -43,7 +48,8 @@ public:
 		cout << "Nomor Plat\t\t : " << noPlat << endl;
 		cout << "Warna\t\t\t : " << warna << endl;
 		cout << "Kecepatan\t\t : " << kecepatan << endl;
-		cout << "Waktu\t\t\t : " << waktu << " Jam" <<
+		cout << "Waktu\t\t\t : " << jam << " Jam" << endl; // Soal NO 4
+		cout << "Waktu\t\t\t : " << detik << " Detik" << // Soal NO 5
 		endl;
 }
 };
