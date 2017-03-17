@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 class Mobil {
 private:
@@ -32,31 +33,70 @@ public:
 		return kecepatan;
 	}
 	void displayMessage(){
-		cout << "Mobil anda adalah bermerek " << manufaktur <<
+		cout << "-------------------------------" << endl;
+		cout << "Mobil anda bermerek \t : " << manufaktur <<
 		endl;
-		cout << "Mempunyai nomor plat " << noPlat << endl;
-		cout << "serta memiliki warna " << warna << endl;
-		cout << "dan mampu menempuh kecepatan " << kecepatan <<
+		cout << "Nomor Plat\t\t : " << noPlat << endl;
+		cout << "Warna\t\t\t : " << warna << endl;
+		cout << "Kecepatan\t\t : " << kecepatan <<
 		endl;
 }
 };
 int main() {
-
+	//Inisialisasi Variable untuk Input User
+	string noPlat;
+	string warna;
+	string manufaktur;
+	int kecepatan;
+	
+	//Input User Mobil Pertama
+	cout<<"Masukkan Merek Mobil ke-1 \t: ";
+	getline(cin, manufaktur);
+	fflush(stdin);
+	cout<<"Masukkan Warna Mobil ke-1 \t: ";
+	getline(cin, warna);
+	fflush(stdin);
+	cout<<"Masukkan No. Plat Mobil ke-1 \t: ";
+	getline(cin, noPlat);
+	fflush(stdin);
+	cout<<"Masukkan Kecepatan Mobil ke-1 \t: ";
+	cin>> kecepatan;
+	fflush(stdin);
+	
+	//Set Data Mobil Pertama	
 	Mobil *m1 = new Mobil();
-	m1->setKecepatan(50);
-	m1->setManufaktur("Toyota");
-	m1->setNoPlat("AB 1231 UA");
-	m1->setWarna("Merah");
+	m1->setKecepatan(kecepatan);
+	m1->setManufaktur(manufaktur);
+	m1->setNoPlat(noPlat);
+	m1->setWarna(warna);
 	m1->displayMessage();
-	cout << "--------------------" << endl;
+	cout << "-------------------------------" << endl;
+	
+	//Input User Mobil Kedua
+	cout<<"Masukkan Merek Mobil ke-2 \t: ";
+	getline(cin, manufaktur);
+	fflush(stdin);
+	cout<<"Masukkan Warna Mobil ke-2 \t: ";
+	getline(cin, warna);
+	fflush(stdin);
+	cout<<"Masukkan No. Plat Mobil ke-2 \t: ";
+	getline(cin, noPlat);
+	fflush(stdin);
+	cout<<"Masukkan Kecepatan Mobil ke-2 \t: ";
+	cin>> kecepatan;
+	fflush(stdin);	
+	
+	//Set Data Mobil Kedua	
 	Mobil *m2 = new Mobil();
-	m2->setKecepatan(100);
-	m2->setManufaktur("Mitsubishi");
-	m2->setNoPlat("N 1134 AG");
-	m2->setWarna("Pink");
+	m2->setKecepatan(kecepatan);
+	m2->setManufaktur(manufaktur);
+	m2->setNoPlat(noPlat);
+	m2->setWarna(warna);
 	m2->displayMessage();
-	cout << "--------------------" << endl;
-	cout << "mobil pada objek m1 di rubah menjadi warna hijau"
+	cout << "-------------------------------" << endl;
+	
+	//Merubah warna Mobil Pertama menjadi Hijau
+	cout << "Mobil Pertama dirubah menjadi warna Hijau"
 	<< endl;
 	m1->setWarna("Hijau");
 	m1->displayMessage();
