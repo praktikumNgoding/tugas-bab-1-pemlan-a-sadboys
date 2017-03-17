@@ -6,18 +6,15 @@ private:
 	string noPlat;
 	string warna;
 	string manufaktur;
-	int kecepatan;
+	double kecepatan;
 	double jam; // Soal NO 4
 	double detik; // Soal NO 5
-	double kecepatanMS; // Soal NO 6
-	double jarakKm; // Soal NO 7
-	double jarakM; // Soal NO 7
 public:
 	void rubahSekon(double s){ // Soal NO 5
 		detik = s * 3600;
 	}
 	void rubahKecepatan(double i){ // Soal NO 6
-		kecepatanMS = (i*1000)/3600;
+		kecepatan = (i*1000)/3600;
 	}
 	void setNoPlat(string s) {
 		noPlat = s;
@@ -35,7 +32,13 @@ public:
 	void setWaktu(double w) { // Soal NO 4
 		jam = w;
 		rubahSekon(jam); // Soal NO 5
-	}	
+	}
+	double hitungJarak(){ // Soal NO 7
+		return kecepatan * detik;
+	}
+	double hitungJarakKm(){ // Soal NO 7
+		return hitungJarak() / 1000;
+	}
 	string getNoPlat() {
 		return noPlat;
 	}
@@ -45,21 +48,17 @@ public:
 	string getManufaktur() {
 		return manufaktur;
 	}
-	int getKecepatan() {
+	double getKecepatan() {
 		return kecepatan;
-	}
-	double hitungJarak(){
-		return kecepatan * jam;
-	}
+	}	
 	void displayMessage(){
-		cout << "-------------------------------" << endl;
-		cout << "Mobil anda bermerek \t : " << manufaktur <<
-		endl;
-		cout << "Nomor Plat\t\t : " << noPlat << endl;
-		cout << "Warna\t\t\t : " << warna << endl;
-		cout << "Kecepatan\t\t : " << kecepatan << " km/h" <<endl; // Soal NO 6
-		cout << "Kecepatan\t\t : " << kecepatanMS << " m/s" <<endl; // Soal NO 6
-		cout << "Jarak yang ditempuh \t : " << hitungJarak() << " Km" << // Soal NO 7
+		cout << "--------------------------------------------------------------" << endl;
+		cout << "Mobil anda bermerek \t : " << getManufaktur() << endl; // Soal No 2
+		cout << "Nomor Plat\t\t : " << getNoPlat() << endl; // Soal No 2
+		cout << "Warna\t\t\t : " << getWarna() << endl; // Soal No 2
+		cout << "Kecepatan\t\t : " << getKecepatan() << " m/s" <<endl; // Soal NO 2 & 6
+		cout << "Jarak yang ditempuh \t : " << hitungJarak() << " m" << endl; // Soal NO 7
+		cout << "Jarak yang ditempuh \t : " << hitungJarakKm() << " Km" << // Soal NO 8
 		endl;
 }
 };
@@ -70,21 +69,21 @@ int main() {
 	string manufaktur;
 	int kecepatan;
 	double waktu;
-	
+	cout << endl <<"\t\t\tTUGAS-BAB-1\tCLASS\t\t\t" << endl<< endl;
 	//Input User Mobil Pertama
-	cout<<"Masukkan Merek Mobil ke-1 \t: ";
+	cout<<"Masukkan Merek Mobil ke-1 \t\t: ";
 	getline(cin, manufaktur);
 	fflush(stdin);
-	cout<<"Masukkan Warna Mobil ke-1 \t: ";
+	cout<<"Masukkan Warna Mobil ke-1 \t\t: ";
 	getline(cin, warna);
 	fflush(stdin);
-	cout<<"Masukkan No. Plat Mobil ke-1 \t: ";
+	cout<<"Masukkan No. Plat Mobil ke-1 \t\t: ";
 	getline(cin, noPlat);
 	fflush(stdin);
-	cout<<"Masukkan Kecepatan Mobil ke-1 \t: ";
+	cout<<"Masukkan Kecepatan(km/h) Mobil ke-1 \t: ";
 	cin>> kecepatan;
 	fflush(stdin);
-	cout<<"Masukkan Waktu (Jam) \t\t: "; // Soal NO 4
+	cout<<"Masukkan Waktu (Jam) ke-1 \t\t: "; // Soal NO 4
 	cin>> waktu;
 	fflush(stdin);
 	
@@ -96,22 +95,22 @@ int main() {
 	m1->setWarna(warna);
 	m1->setWaktu(waktu); // Soal NO 4
 	m1->displayMessage();
-	cout << "-------------------------------" << endl;
+	cout << "--------------------------------------------------------------" << endl;
 	
 	//Input User Mobil Kedua
-	cout<<"Masukkan Merek Mobil ke-2 \t: ";
+	cout<<"Masukkan Merek Mobil ke-2 \t\t: ";
 	getline(cin, manufaktur);
 	fflush(stdin);
-	cout<<"Masukkan Warna Mobil ke-2 \t: ";
+	cout<<"Masukkan Warna Mobil ke-2 \t\t: ";
 	getline(cin, warna);
 	fflush(stdin);
-	cout<<"Masukkan No. Plat Mobil ke-2 \t: ";
+	cout<<"Masukkan No. Plat Mobil ke-2 \t\t: ";
 	getline(cin, noPlat);
 	fflush(stdin);
-	cout<<"Masukkan Kecepatan Mobil ke-2 \t: ";
+	cout<<"Masukkan Kecepatan(km/h) Mobil ke-2 \t: ";
 	cin>> kecepatan;
-	fflush(stdin);	
-	cout<<"Masukkan Waktu (Jam) \t\t: "; // Soal NO 4
+	fflush(stdin);
+	cout<<"Masukkan Waktu (Jam) ke-2 \t\t: "; // Soal NO 4
 	cin>> waktu;
 	fflush(stdin);
 	
@@ -123,7 +122,7 @@ int main() {
 	m2->setWarna(warna);
 	m2->setWaktu(waktu); // Soal NO 4
 	m2->displayMessage();
-	cout << "-------------------------------" << endl;
+	cout << "--------------------------------------------------------------" << endl;
 	
 	//Merubah warna Mobil Pertama menjadi Hijau
 	cout << "Mobil Pertama dirubah menjadi warna Hijau"
