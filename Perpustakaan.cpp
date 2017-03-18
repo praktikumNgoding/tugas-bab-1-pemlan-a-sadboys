@@ -49,7 +49,7 @@ int main() {
 	int tahun_terbit;
 	//Inisialisasi Variable untuk pilihan dari user
 	int pilihan_kategori;
-	char pilihan;
+	int pilihan;
 	//Membuat class category setiap object dengan maks data = 5
 	struct category cat;
 	Buku teknologi[5];
@@ -82,7 +82,7 @@ int main() {
 		cin >> pilihan;
 		fflush(stdin);
 		cout<<"\n";
-		if(pilihan=='1'){
+		if(pilihan==1){
 			//Jika pilihan 1 maka akan melakukan Insert Buku dengan memilih kategori terlebih dahulu
 			system("cls");
 			cout<<"1. Teknologi\n";	
@@ -235,7 +235,7 @@ int main() {
 				system("pause");
 			}
 		}
-		else if(pilihan=='2'){
+		else if(pilihan==2){
 			//Jika pilihan 1 maka akan menampilkan Buku dengan memilih kategori terlebih dahulu
 			system("cls");
 			cout<<"1. Teknologi\n";	
@@ -316,7 +316,7 @@ int main() {
 				cout << "Masukkan pilihan antara 1 s/d 7 ! !";
 				system("pause");
 			}
-			cout <<"Press any key to get back . . ."endl;
+			cout <<"Press any key to get back . . ." <<endl;
 			system("pause");
 		}else{
 			system("cls");
@@ -324,7 +324,7 @@ int main() {
 			system("pause");
 		}
 			
-	}while(pilihan!='3');
+	}while(pilihan!=3);
 	cout<<"Created by :             "<<endl;
 	cout<<"      Muhammad Yaqub	  	"<<endl;
 	cout<<"    Fatchullah Wahid A	"<<endl;
