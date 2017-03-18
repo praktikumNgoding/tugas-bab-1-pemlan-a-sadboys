@@ -233,12 +233,6 @@ int main() {
 				fflush(stdin);
 				fiksi[n_fis].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.fiksi);
 				n_fis++;
-<<<<<<< HEAD
-			}else{
-				system("cls");
-				cout << "Masukkan pilihan antara 1 s/d 7 ! !\n\n";
-				system("pause");
-=======
 			}else if(pilihan_kategori == 8){
 				//Input Data Catagory Komik
 				cout<<"Masukkan Nama Buku \t\t: ";
@@ -258,7 +252,10 @@ int main() {
 				fflush(stdin);
 				komik[n_kom].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.komik);
 				n_kom++;
->>>>>>> 3a2352ecb1e697ac13f092232cf551f4c735f29e
+			}else{
+				system("cls");
+				cout << "Masukkan pilihan antara 1 s/d 8 ! !\n\n";
+				system("pause");
 			}
 		}
 		else if(pilihan==2){
@@ -337,14 +334,7 @@ int main() {
 				for(int i=0;i<n_fis;i++){
 					cout << endl << "Buku ke-" << i + 1 << endl;
 					fiksi[i].displayMessage();
-<<<<<<< HEAD
 				}	
-			}else{
-				system("cls");
-				cout << "Masukkan pilihan antara 1 s/d 7 ! !\n\n";
-				system("pause");
-=======
-				}
 			}else if(pilihan_kategori == 8){
 				system("cls");
 				cout << "--------------------------------------------------------------" << endl;
@@ -353,9 +343,11 @@ int main() {
 				for(int i=0;i<n_kom;i++){
 					komik[i].displayMessage();	
 				}
->>>>>>> 3a2352ecb1e697ac13f092232cf551f4c735f29e
+			}else{
+				system("cls");
+				cout << "Masukkan pilihan antara 1 s/d 8 ! !\n\n";
+				system("pause");
 			}
-			cout <<"Press any key to get back . . ." <<endl;
 			system("pause");
 		}else{
 			system("cls");
