@@ -107,42 +107,6 @@ int main() {
 				fflush(stdin);
 				teknologi[n_tekno].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.teknologi);
 				n_tekno++;
-			}else if(pilihan_kategori == 4){
-				cout<<"Masukkan Nama Buku \t\t: ";
-				getline(cin, nama_buku);
-				fflush(stdin);
-				cout<<"Masukkan Pengarang Buku \t: ";
-				getline(cin, pengarang);
-				fflush(stdin);
-				cout<<"Masukkan Penerbit Buku \t\t: ";
-				getline(cin, penerbit);
-				fflush(stdin);
-				cout<<"Masukkan Tempat Terbit Buku \t: ";
-				getline(cin, tempat_terbit);
-				fflush(stdin);
-				cout<<"Masukkan Tahun Terbit Buku \t: ";
-				cin>> tahun_terbit;
-				fflush(stdin);
-				agama[n_agama].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.agama);
-				n_agama++;
-			}else if(pilihan_kategori == 7){
-				cout<<"Masukkan Nama Buku \t\t: ";
-				getline(cin, nama_buku);
-				fflush(stdin);
-				cout<<"Masukkan Pengarang Buku \t: ";
-				getline(cin, pengarang);
-				fflush(stdin);
-				cout<<"Masukkan Penerbit Buku \t\t: ";
-				getline(cin, penerbit);
-				fflush(stdin);
-				cout<<"Masukkan Tempat Terbit Buku \t: ";
-				getline(cin, tempat_terbit);
-				fflush(stdin);
-				cout<<"Masukkan Tahun Terbit Buku \t: ";
-				cin>> tahun_terbit;
-				fflush(stdin);
-				fiksi[n_fis].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.fiksi);
-				n_fis++;
 			}else if(pilihan_kategori == 2){
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
@@ -161,24 +125,6 @@ int main() {
 				fflush(stdin);
 				filsafat[n_fil].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.filsafat);
 				n_fil++;
-			}else if(pilihan_kategori == 6){
-				cout<<"Masukkan Nama Buku \t\t: ";
-				getline(cin, nama_buku);
-				fflush(stdin);
-				cout<<"Masukkan Pengarang Buku \t: ";
-				getline(cin, pengarang);
-				fflush(stdin);
-				cout<<"Masukkan Penerbit Buku \t\t: ";
-				getline(cin, penerbit);
-				fflush(stdin);
-				cout<<"Masukkan Tempat Terbit Buku \t: ";
-				getline(cin, tempat_terbit);
-				fflush(stdin);
-				cout<<"Masukkan Tahun Terbit Buku \t: ";
-				cin>> tahun_terbit;
-				fflush(stdin);
-				politik[n_poli].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.politik);
-				n_poli++;
 			}else if(pilihan_kategori == 3){
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
@@ -197,6 +143,24 @@ int main() {
 				fflush(stdin);
 				sejarah[n_sej].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.sejarah);
 				n_sej++;
+			}else if(pilihan_kategori == 4){
+				cout<<"Masukkan Nama Buku \t\t: ";
+				getline(cin, nama_buku);
+				fflush(stdin);
+				cout<<"Masukkan Pengarang Buku \t: ";
+				getline(cin, pengarang);
+				fflush(stdin);
+				cout<<"Masukkan Penerbit Buku \t\t: ";
+				getline(cin, penerbit);
+				fflush(stdin);
+				cout<<"Masukkan Tempat Terbit Buku \t: ";
+				getline(cin, tempat_terbit);
+				fflush(stdin);
+				cout<<"Masukkan Tahun Terbit Buku \t: ";
+				cin>> tahun_terbit;
+				fflush(stdin);
+				agama[n_agama].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.agama);
+				n_agama++;
 			}else if(pilihan_kategori == 5){
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
@@ -215,6 +179,42 @@ int main() {
 				fflush(stdin);
 				psikologi[n_psik].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.psikologi);
 				n_psik++;
+			}else if(pilihan_kategori == 6){
+				cout<<"Masukkan Nama Buku \t\t: ";
+				getline(cin, nama_buku);
+				fflush(stdin);
+				cout<<"Masukkan Pengarang Buku \t: ";
+				getline(cin, pengarang);
+				fflush(stdin);
+				cout<<"Masukkan Penerbit Buku \t\t: ";
+				getline(cin, penerbit);
+				fflush(stdin);
+				cout<<"Masukkan Tempat Terbit Buku \t: ";
+				getline(cin, tempat_terbit);
+				fflush(stdin);
+				cout<<"Masukkan Tahun Terbit Buku \t: ";
+				cin>> tahun_terbit;
+				fflush(stdin);
+				politik[n_poli].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.politik);
+				n_poli++;
+			}else if(pilihan_kategori == 7){
+				cout<<"Masukkan Nama Buku \t\t: ";
+				getline(cin, nama_buku);
+				fflush(stdin);
+				cout<<"Masukkan Pengarang Buku \t: ";
+				getline(cin, pengarang);
+				fflush(stdin);
+				cout<<"Masukkan Penerbit Buku \t\t: ";
+				getline(cin, penerbit);
+				fflush(stdin);
+				cout<<"Masukkan Tempat Terbit Buku \t: ";
+				getline(cin, tempat_terbit);
+				fflush(stdin);
+				cout<<"Masukkan Tahun Terbit Buku \t: ";
+				cin>> tahun_terbit;
+				fflush(stdin);
+				fiksi[n_fis].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.fiksi);
+				n_fis++;
 			}
 		}
 		else if(pilihan=='2'){
@@ -237,22 +237,6 @@ int main() {
 				for(int i=0;i<n_tekno;i++){
 					teknologi[i].displayMessage();
 				}
-			}else if(pilihan_kategori == 4){
-				system("cls");
-				cout << "--------------------------------------------------------------" << endl;
-				cout<<"\t\t\tBuku Kategori Agama\n";
-				cout << "--------------------------------------------------------------" << endl;
-				for(int i=0;i<n_agama;i++){
-					agama[i].displayMessage();
-				}
-			}else if(pilihan_kategori == 7){
-				system("cls");
-				cout << "--------------------------------------------------------------" << endl;
-				cout<<"\t\t\tBuku Kategori Fiksi\n";
-				cout << "--------------------------------------------------------------" << endl;
-				for(int i=0;i<n_fis;i++){
-					fiksi[i].displayMessage();
-				}	
 			}else if(pilihan_kategori == 2){
 				system("cls");
 				cout << "--------------------------------------------------------------" << endl;
@@ -260,14 +244,6 @@ int main() {
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_fil;i++){
 					filsafat[i].displayMessage();
-				}	
-			}else if(pilihan_kategori == 6){
-				system("cls");
-				cout << "--------------------------------------------------------------" << endl;
-				cout<<"\t\t\tBuku Kategori Politik\n";
-				cout << "--------------------------------------------------------------" << endl;
-				for(int i=0;i<n_poli;i++){
-					politik[i].displayMessage();
 				}	
 			}else if(pilihan_kategori == 3){
 				system("cls");
@@ -277,6 +253,14 @@ int main() {
 				for(int i=0;i<n_sej;i++){
 					sejarah[i].displayMessage();
 				}	
+			}else if(pilihan_kategori == 4){
+				system("cls");
+				cout << "--------------------------------------------------------------" << endl;
+				cout<<"\t\t\tBuku Kategori Agama\n";
+				cout << "--------------------------------------------------------------" << endl;
+				for(int i=0;i<n_agama;i++){
+					agama[i].displayMessage();
+				}
 			}else if(pilihan_kategori == 5){
 				system("cls");
 				cout << "--------------------------------------------------------------" << endl;
@@ -285,6 +269,22 @@ int main() {
 				for(int i=0;i<n_psik;i++){
 					psikologi[i].displayMessage();
 				}
+			}else if(pilihan_kategori == 6){
+				system("cls");
+				cout << "--------------------------------------------------------------" << endl;
+				cout<<"\t\t\tBuku Kategori Politik\n";
+				cout << "--------------------------------------------------------------" << endl;
+				for(int i=0;i<n_poli;i++){
+					politik[i].displayMessage();
+				}	
+			}else if(pilihan_kategori == 7){
+				system("cls");
+				cout << "--------------------------------------------------------------" << endl;
+				cout<<"\t\t\tBuku Kategori Fiksi\n";
+				cout << "--------------------------------------------------------------" << endl;
+				for(int i=0;i<n_fis;i++){
+					fiksi[i].displayMessage();
+				}	
 			}
 			system("pause");
 		}
