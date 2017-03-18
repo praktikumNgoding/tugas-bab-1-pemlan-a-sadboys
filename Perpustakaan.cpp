@@ -41,12 +41,16 @@ public:
 	
 };
 int main() {
+	//Inisialisasi Variable untuk input User
 	string nama_buku;
 	string pengarang;
 	string penerbit;
 	string tempat_terbit;
 	int tahun_terbit;
+	//Inisialisasi Variable untuk pilihan dari user
 	int pilihan_kategori;
+	char pilihan;
+	//Membuat class category setiap object dengan maks data = 5
 	struct category cat;
 	Buku teknologi[5];
 	Buku filsafat[5];
@@ -55,6 +59,7 @@ int main() {
 	Buku psikologi[5];
 	Buku politik[5];
 	Buku fiksi[5];
+	//Untuk menghitung jumlah setiap category mulai dari 0
 	int n_tekno = 0;
 	int n_sej= 0; 
 	int n_psik = 0;
@@ -62,8 +67,9 @@ int main() {
 	int n_fil = 0;
 	int n_agama = 0;
 	int n_poli = 0;
-	char pilihan;
+	
 	do{
+		//Menampilkan menu dengan perulangan selama pilihan tidak sama dengan 3
 		system("cls");
 		cout << "--------------------------------------------------------------" << endl;
 		cout<<"\t\t\tProgram Perpustakaan\n";
@@ -77,6 +83,7 @@ int main() {
 		fflush(stdin);
 		cout<<"\n";
 		if(pilihan=='1'){
+			//Jika pilihan 1 maka akan melakukan Insert Buku dengan memilih kategori terlebih dahulu
 			system("cls");
 			cout<<"1. Teknologi\n";	
 			cout<<"2. Filsafat\n";
@@ -90,6 +97,7 @@ int main() {
 			fflush(stdin);
 			cout<<"\n";
 			if(pilihan_kategori == 1){
+				//Input Data Category Teknologi
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -108,6 +116,7 @@ int main() {
 				teknologi[n_tekno].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.teknologi);
 				n_tekno++;
 			}else if(pilihan_kategori == 2){
+				//Input Data Category Filsafat
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -126,6 +135,7 @@ int main() {
 				filsafat[n_fil].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.filsafat);
 				n_fil++;
 			}else if(pilihan_kategori == 3){
+				//Input Data Category Sejarah
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -144,6 +154,7 @@ int main() {
 				sejarah[n_sej].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.sejarah);
 				n_sej++;
 			}else if(pilihan_kategori == 4){
+				//Input Data Category Agama
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -162,6 +173,7 @@ int main() {
 				agama[n_agama].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.agama);
 				n_agama++;
 			}else if(pilihan_kategori == 5){
+				//Input Data Category Psikologi
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -180,6 +192,7 @@ int main() {
 				psikologi[n_psik].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.psikologi);
 				n_psik++;
 			}else if(pilihan_kategori == 6){
+				//Input Data Category Politik
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -198,6 +211,7 @@ int main() {
 				politik[n_poli].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.politik);
 				n_poli++;
 			}else if(pilihan_kategori == 7){
+				//Input Data Category Fiksi
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -218,6 +232,7 @@ int main() {
 			}
 		}
 		else if(pilihan=='2'){
+			//Jika pilihan 1 maka akan menampilkan Buku dengan memilih kategori terlebih dahulu
 			system("cls");
 			cout<<"1. Teknologi\n";	
 			cout<<"2. Filsafat\n";
