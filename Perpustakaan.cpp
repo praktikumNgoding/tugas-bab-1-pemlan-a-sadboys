@@ -9,6 +9,7 @@ struct category{
 	string psikologi 	= "Psikologi";
 	string politik 		= "Politik";
 	string fiksi 		= "Fiksi";
+	string komik 		= "Komik";
 	
 };
 class Buku {
@@ -59,14 +60,16 @@ int main() {
 	Buku psikologi[5];
 	Buku politik[5];
 	Buku fiksi[5];
+	Buku komik[5];
 	//Untuk menghitung jumlah setiap category mulai dari 0
-	int n_tekno 	= 0;
+	int n_tekno 		= 0;
 	int n_sej		= 0; 
 	int n_psik 		= 0;
 	int n_fis 		= 0;	
 	int n_fil 		= 0;
 	int n_agama		= 0;
 	int n_poli 		= 0;
+	int n_kom 		= 0;
 	
 	do{
 		//Menampilkan menu dengan perulangan selama pilihan tidak sama dengan 3
@@ -91,7 +94,8 @@ int main() {
 			cout<<"4. Agama\n";
 			cout<<"5. Psikologi\n";
 			cout<<"6. Politik\n";
-			cout<<"7. Fiksi\n\n";
+			cout<<"7. Fiksi\n";
+			cout<<"8. Komik\n\n";
 			cout<<"Pilih kategori : ";
 			cin >> pilihan_kategori;
 			fflush(stdin);
@@ -229,6 +233,29 @@ int main() {
 				fflush(stdin);
 				fiksi[n_fis].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.fiksi);
 				n_fis++;
+			}else if(pilihan_kategori == 8){
+				cout<<"Masukkan Nama Buku \t\t: ";
+				getline(cin, nama_buku);
+				fflush(stdin);
+				cout<<"Masukkan Pengarang Buku \t: ";
+				getline(cin, pengarang);
+				fflush(stdin);
+				cout<<"Masukkan Penerbit Buku \t\t: ";
+				getline(cin, penerbit);
+				fflush(stdin);
+				cout<<"Masukkan Tempat Terbit Buku \t: ";
+				getline(cin, tempat_terbit);
+				fflush(stdin);
+				cout<<"Masukkan Tahun Terbit Buku \t: ";
+				cin>> tahun_terbit;
+				fflush(stdin);
+				komik[n_kom].setNamaBuku(nama_buku);
+				komik[n_kom].setPengarang(pengarang);
+				komik[n_kom].setPenerbit(penerbit);
+				komik[n_kom].setTempatTerbit(tempat_terbit);
+				komik[n_kom].setTahunTerbit(tahun_terbit);
+				komik[n_kom].setKategori(cat.komik);
+				n_kom++;
 			}
 		}
 		else if(pilihan=='2'){
@@ -240,7 +267,8 @@ int main() {
 			cout<<"4. Agama\n";
 			cout<<"5. Psikologi\n";
 			cout<<"6. Politik\n";
-			cout<<"7. Fiksi\n\n";
+			cout<<"7. Fiksi\n";
+			cout<<"8. Komik\n\n";
 			cout<<"Pilih kategori : ";
 			cin >> pilihan_kategori;
 			cout<<"\n";	
@@ -299,15 +327,23 @@ int main() {
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_fis;i++){
 					fiksi[i].displayMessage();
-				}	
+				}
+			}else if(pilihan_kategori == 8){
+				system("cls");
+				cout << "--------------------------------------------------------------" << endl;
+				cout<<"\t\t\tBuku Kategori Komik\n";
+				cout << "--------------------------------------------------------------" << endl;
+				for(int i=0;i<n_kom;i++){
+					komik[i].displayMessage();	
+				}
 			}
 			system("pause");
 		}
 			
 	}while(pilihan!='3');
 	cout<<"Created by :             "<<endl;
-	cout<<"      Muhammad Yaqub	  	"<<endl;
+	cout<<"      Muhammad Yaqub	"<<endl;
 	cout<<"    Fatchullah Wahid A	"<<endl;
-	cout<<"      Bimo Prasetyo 		"<<endl;
+	cout<<"      Bimo Prasetyo 	"<<endl;
 	return 0;
 }
