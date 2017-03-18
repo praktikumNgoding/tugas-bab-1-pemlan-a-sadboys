@@ -2,13 +2,13 @@
 
 using namespace std;
 struct category{
-	string teknologi = "Teknologi";
-	string filsafat = "Filsafat";
-	string sejarah = "Sejarah";
-	string agama = "Agama";
-	string psikologi = "Psikologi";
-	string politik = "Politik";
-	string fiksi = "Fiksi";
+	string teknologi 	= "Teknologi";
+	string filsafat 	= "Filsafat";
+	string sejarah 		= "Sejarah";
+	string agama 		= "Agama";
+	string psikologi 	= "Psikologi";
+	string politik 		= "Politik";
+	string fiksi 		= "Fiksi";
 	
 };
 class Buku {
@@ -22,16 +22,16 @@ private:
 public:
 	
 	void setBuku(string nama, string pengarang, string penerbit, string tempat_terbit, int tahun_terbit, string kategori){
-		this->nama_buku = nama;
-		this->pengarang = pengarang;
-		this->penerbit = penerbit;
+		this->nama_buku 	= nama;
+		this->pengarang 	= pengarang;
+		this->penerbit 		= penerbit;
 		this->tempat_terbit = tempat_terbit;
-		this->tahun_terbit = tahun_terbit;
-		this->kategori = kategori;
+		this->tahun_terbit 	= tahun_terbit;
+		this->kategori 		= kategori;
 	}
 	
 	void displayMessage(){
-		cout << endl << "Nama Buku\t : " << nama_buku << endl;
+		cout << "\nNama Buku\t : " << nama_buku << endl;
 		cout << "Pengarang\t : " << pengarang << endl; 
 		cout << "Penerbit\t : " << penerbit << endl; 
 		cout << "Tempat Terbit\t : " << tempat_terbit << endl; 
@@ -60,13 +60,13 @@ int main() {
 	Buku politik[5];
 	Buku fiksi[5];
 	//Untuk menghitung jumlah setiap category mulai dari 0
-	int n_tekno = 0;
-	int n_sej= 0; 
-	int n_psik = 0;
-	int n_fis = 0;	
-	int n_fil = 0;
-	int n_agama = 0;
-	int n_poli = 0;
+	int n_tekno 	= 0;
+	int n_sej		= 0; 
+	int n_psik 		= 0;
+	int n_fis 		= 0;	
+	int n_fil 		= 0;
+	int n_agama		= 0;
+	int n_poli 		= 0;
 	
 	do{
 		//Menampilkan menu dengan perulangan selama pilihan tidak sama dengan 3
@@ -305,5 +305,9 @@ int main() {
 		}
 			
 	}while(pilihan!='3');
+	cout<<"Created by :             "<<endl;
+	cout<<"      Muhammad Yaqub	  	"<<endl;
+	cout<<"    Fatchullah Wahid A	"<<endl;
+	cout<<"      Bimo Prasetyo 		"<<endl;
 	return 0;
 }
