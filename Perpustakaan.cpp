@@ -250,6 +250,7 @@ int main() {
 				cout<<"\t\t\tBuku Kategori Teknologi\n";
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_tekno;i++){
+					cout << endl << "Buku ke-" << i + 1 << endl;
 					teknologi[i].displayMessage();
 				}
 			}else if(pilihan_kategori == 2){
@@ -258,6 +259,7 @@ int main() {
 				cout<<"\t\t\tBuku Kategori Filsafat\n";
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_fil;i++){
+					cout << endl << "Buku ke-" << i + 1 << endl;
 					filsafat[i].displayMessage();
 				}	
 			}else if(pilihan_kategori == 3){
@@ -266,6 +268,7 @@ int main() {
 				cout<<"\t\t\tBuku Kategori Sejarah\n";
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_sej;i++){
+					cout << endl << "Buku ke-" << i + 1 << endl;
 					sejarah[i].displayMessage();
 				}	
 			}else if(pilihan_kategori == 4){
@@ -274,6 +277,7 @@ int main() {
 				cout<<"\t\t\tBuku Kategori Agama\n";
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_agama;i++){
+					cout << endl << "Buku ke-" << i + 1 << endl;
 					agama[i].displayMessage();
 				}
 			}else if(pilihan_kategori == 5){
@@ -282,6 +286,7 @@ int main() {
 				cout<<"\t\t\tBuku Kategori Psikologi\n";
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_psik;i++){
+					cout << endl << "Buku ke-" << i + 1 << endl;
 					psikologi[i].displayMessage();
 				}
 			}else if(pilihan_kategori == 6){
@@ -290,6 +295,7 @@ int main() {
 				cout<<"\t\t\tBuku Kategori Politik\n";
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_poli;i++){
+					cout << endl << "Buku ke-" << i + 1 << endl;
 					politik[i].displayMessage();
 				}	
 			}else if(pilihan_kategori == 7){
@@ -298,9 +304,11 @@ int main() {
 				cout<<"\t\t\tBuku Kategori Fiksi\n";
 				cout << "--------------------------------------------------------------" << endl;
 				for(int i=0;i<n_fis;i++){
+					cout << endl << "Buku ke-" << i + 1 << endl;
 					fiksi[i].displayMessage();
 				}	
 			}
+			cout <<"Press any key to get back . . ."endl;
 			system("pause");
 		}
 			
