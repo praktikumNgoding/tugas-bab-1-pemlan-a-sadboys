@@ -346,7 +346,6 @@ int main() {
 			}else{
 				system("cls");
 				cout << "Masukkan pilihan antara 1 s/d 8 ! !\n\n";
-				system("pause");
 			}
 			system("pause");
 		}
