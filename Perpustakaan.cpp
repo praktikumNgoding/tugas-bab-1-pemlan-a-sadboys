@@ -30,30 +30,12 @@ public:
 		this->kategori = kategori;
 	}
 	
-	string getNamaBuku() {
-		return nama_buku;
-	}
-	string getPengarang() {
-		return pengarang;
-	}
-	string getPenerbit() {
-		return penerbit;
-	}
-	string getTempatTerbit() {
-		return tempat_terbit;
-	}
-	int getTahunTerbit() {
-		return tahun_terbit;
-	}
-	string getKategori(){
-		return kategori;
-	}	
 	void displayMessage(){
-		cout << endl << "Nama Buku\t : " << getNamaBuku() << endl;
-		cout << "Pengarang\t : " << getPengarang() << endl; 
-		cout << "Penerbit\t : " << getPenerbit() << endl; 
-		cout << "Tempat Terbit\t : " << getTempatTerbit() << endl; 
-		cout << "Tahun Terbit\t : " << getTahunTerbit() <<
+		cout << endl << "Nama Buku\t : " << nama_buku << endl;
+		cout << "Pengarang\t : " << pengarang << endl; 
+		cout << "Penerbit\t : " << penerbit << endl; 
+		cout << "Tempat Terbit\t : " << tempat_terbit << endl; 
+		cout << "Tahun Terbit\t : " << tahun_terbit <<
 		endl;
 }
 	
