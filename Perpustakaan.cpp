@@ -25,7 +25,7 @@ public:
 		this->nama_buku 	= nama;
 		this->pengarang 	= pengarang;
 		this->penerbit 		= penerbit;
-		this->tempat_terbit = tempat_terbit;
+		this->tempat_terbit	= tempat_terbit;
 		this->tahun_terbit 	= tahun_terbit;
 		this->kategori 		= kategori;
 	}
