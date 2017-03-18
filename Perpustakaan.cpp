@@ -259,7 +259,7 @@ int main() {
 			}
 		}
 		else if(pilihan==2){
-			//Jika pilihan 1 maka akan menampilkan Buku dengan memilih kategori terlebih dahulu
+			//Jika pilihan 2 maka akan menampilkan Buku dengan memilih kategori terlebih dahulu
 			system("cls");
 			cout<<"1. Teknologi\n";	
 			cout<<"2. Filsafat\n";
@@ -348,10 +348,6 @@ int main() {
 				cout << "Masukkan pilihan antara 1 s/d 8 ! !\n\n";
 				system("pause");
 			}
-			system("pause");
-		}else{
-			system("cls");
-			cout << "Masukkan pilihan antara 1 s/d 3 ! !\n\n";
 			system("pause");
 		}
 			
