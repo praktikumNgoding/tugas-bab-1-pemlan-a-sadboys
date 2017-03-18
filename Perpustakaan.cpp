@@ -229,6 +229,10 @@ int main() {
 				fflush(stdin);
 				fiksi[n_fis].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.fiksi);
 				n_fis++;
+			}else{
+				system("cls");
+				cout << "Masukkan pilihan antara 1 s/d 7 ! !";
+				system("pause");
 			}
 		}
 		else if(pilihan=='2'){
@@ -307,8 +311,16 @@ int main() {
 					cout << endl << "Buku ke-" << i + 1 << endl;
 					fiksi[i].displayMessage();
 				}	
+			}else{
+				system("cls");
+				cout << "Masukkan pilihan antara 1 s/d 7 ! !";
+				system("pause");
 			}
 			cout <<"Press any key to get back . . ."endl;
+			system("pause");
+		}else{
+			system("cls");
+			cout << "Masukkan pilihan antara 1 s/d 3 ! !";
 			system("pause");
 		}
 			
