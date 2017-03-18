@@ -231,7 +231,7 @@ int main() {
 				n_fis++;
 			}else{
 				system("cls");
-				cout << "Masukkan pilihan antara 1 s/d 7 ! !";
+				cout << "Masukkan pilihan antara 1 s/d 7 ! !\n\n";
 				system("pause");
 			}
 		}
@@ -313,14 +313,14 @@ int main() {
 				}	
 			}else{
 				system("cls");
-				cout << "Masukkan pilihan antara 1 s/d 7 ! !";
+				cout << "Masukkan pilihan antara 1 s/d 7 ! !\n\n";
 				system("pause");
 			}
 			cout <<"Press any key to get back . . ." <<endl;
 			system("pause");
 		}else{
 			system("cls");
-			cout << "Masukkan pilihan antara 1 s/d 3 ! !";
+			cout << "Masukkan pilihan antara 1 s/d 3 ! !\n\n";
 			system("pause");
 		}
 			
