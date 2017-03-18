@@ -234,6 +234,7 @@ int main() {
 				fiksi[n_fis].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.fiksi);
 				n_fis++;
 			}else if(pilihan_kategori == 8){
+				//Input Data Catagory Komik
 				cout<<"Masukkan Nama Buku \t\t: ";
 				getline(cin, nama_buku);
 				fflush(stdin);
@@ -249,12 +250,7 @@ int main() {
 				cout<<"Masukkan Tahun Terbit Buku \t: ";
 				cin>> tahun_terbit;
 				fflush(stdin);
-				komik[n_kom].setNamaBuku(nama_buku);
-				komik[n_kom].setPengarang(pengarang);
-				komik[n_kom].setPenerbit(penerbit);
-				komik[n_kom].setTempatTerbit(tempat_terbit);
-				komik[n_kom].setTahunTerbit(tahun_terbit);
-				komik[n_kom].setKategori(cat.komik);
+				komik[n_kom].setBuku(nama_buku, pengarang, penerbit, tempat_terbit, tahun_terbit, cat.komik);
 				n_kom++;
 			}
 		}
