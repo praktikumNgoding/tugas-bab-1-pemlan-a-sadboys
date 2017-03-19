@@ -28,13 +28,13 @@ public:
  
 };
 int main(){
-	int lembar = 50;
-	double lembarPerhari = 0.25; // 1 Hari menulis 1/2 halaman buku -> 1 lembar = 2 halaman
-	int kataPerhari = 100; // 1 Hari menulis 100 kata pada 1/2 halaman buku
+	int lembar = 50; // 1 buku = 50 lembar
+	double lembarPerhari = 0.25; // 1 lembar = 2 halaman (halaman_depan, halaman_belakang)
+	int kataPerhari = 100; // 1 hari menghabiskan 100 kata (1/2 halaman)
 	Buku *Mahasiswa = new Buku();
 	cout << "Mahasiswa memiliki " << lembar <<" lembar pada Buku"<< endl;
 	Mahasiswa->hitungHari(lembarPerhari, lembar);
-	Mahasiswa->hitungKata(kataPerhari, lembar*2); // 1 Lembar = 2 Halaman
+	Mahasiswa->hitungKata(kataPerhari, lembar*4); // 1 hari = 1/2 halaman, jadi 1 lembar = 4 hari, maka 50 lembar * 4 hari =200 hari, jadi 100 kata * 200 hari = 20.000 kata
 	Mahasiswa->displayMessage();
 	return 0;
 }
