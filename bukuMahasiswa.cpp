@@ -34,7 +34,7 @@ int main(){
 	Buku *Mahasiswa = new Buku();
 	cout << "Mahasiswa memiliki " << lembar <<" lembar pada Buku"<< endl;
 	Mahasiswa->hitungHari(lembarPerhari, lembar);
-	Mahasiswa->hitungKata(kataPerhari, lembar*2); // 1 Lembar = 1/2 Halaman
+	Mahasiswa->hitungKata(kataPerhari, lembar*2); // 1 Lembar = 2 Halaman
 	Mahasiswa->displayMessage();
 	return 0;
 }
