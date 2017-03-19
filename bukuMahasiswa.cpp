@@ -30,11 +30,11 @@ public:
 int main(){
 	int lembar = 50;
 	double lembarPerhari = 0.25; // 1 Hari menulis 1/2 halaman buku -> 1 lembar = 2 halaman
-	int kataPerhari = 200; // 1 Hari menulis 100 kata pada 1/2 halaman buku -> 1 lembar = 2 halaman
+	int kataPerhari = 100; // 1 Hari menulis 100 kata pada 1/2 halaman buku
 	Buku *Mahasiswa = new Buku();
 	cout << "Mahasiswa memiliki " << lembar <<" lembar pada Buku"<< endl;
 	Mahasiswa->hitungHari(lembarPerhari, lembar);
-	Mahasiswa->hitungKata(kataPerhari, lembar);
+	Mahasiswa->hitungKata(kataPerhari, lembar*2); // 1 Lembar = 1/2 Halaman
 	Mahasiswa->displayMessage();
 	return 0;
 }
