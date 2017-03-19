@@ -29,7 +29,7 @@ public:
 };
 int main(){
 	int lembar = 50; // 1 buku = 50 lembar
-	double lembarPerhari = 0.25; // 1 lembar = 2 halaman (halaman_depan, halaman_belakang)
+	double lembarPerhari = 0.25; // 1 lembar = 2 halaman (halaman_depan, halaman_belakang), 1 hari butuh 1/2 halaman = 1/4 lembar
 	int kataPerhari = 100; // 1 hari menghabiskan 100 kata (1/2 halaman)
 	Buku *Mahasiswa = new Buku();
 	cout << "Mahasiswa memiliki " << lembar <<" lembar pada Buku"<< endl;
