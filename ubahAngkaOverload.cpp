@@ -149,13 +149,13 @@ int main(){
 	angka1->displayMessage();
 	
 	cout << "\n--------------------------------------------------------------" << endl;
-	
-	classUbah *string1 = new classUbah();
 	cout << "\n--------------------------------------------------------------" << endl;
 	cout << "\n\t\t\tEXAMPLE STRING TO ANGKA" << endl;
 	angka1->ubah("Enam Sembilan");
 	cout<<"\nString yang telah di-input \t\t\t: Enam Sembilan\n";
 	angka1->displayMessage2();
+	
+	classUbah *string1 = new classUbah();
 	cout << "\n--------------------------------------------------------------" << endl;
 	cout<<"\nMasukkan String yang ingin diubah ke Angka \t: ";
 	getline(cin, kataAngka);
