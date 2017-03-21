@@ -56,8 +56,10 @@ public:
 			angka[index]=2;
 		}else if(s=="Satu" || s=="satu"){
 			angka[index]=1;
-		}else{
+		}else if(s=="Puluh" || s=="puluh"){
 			angka[index]=0;
+		}else{
+			angka[index]=NULL;
 		}
 	}
 	
@@ -89,7 +91,7 @@ public:
 	//Menampilkan Pesan untuk String
 	void displayMessage(){
 		if(string1==""){
-			cout << "Hasil Konversi \t\t\t\t: " << string2;
+			cout << "Hasil Konversi \t\t\t\t\t: " << string2;
 		}else{
 			cout << "Hasil Konversi \t\t\t\t\t: " << string1 << " " << string2;
 		}
@@ -98,7 +100,12 @@ public:
 	
 	//Menampilkan Pesan untuk Angka
 	void displayMessage2(){
-		cout << "Hasil Konversi \t\t\t\t\t: " << angka[0] << angka[1];
+		if(angka[1]==NULL){
+			cout << "Hasil Konversi \t\t\t\t\t: " << angka[0] ;
+		}else{
+			cout << "Hasil Konversi \t\t\t\t\t: " << angka[0] << angka[1];
+		}
+		
 	}
 	
 	//Mengubah Angka menjadi String
@@ -117,8 +124,9 @@ public:
 		int i=0;
 		while (getline(iss, kata, ' '))
 	    {
-	        convert(kata, i);
-	        i++;
+        	convert(kata, i);
+        	i++;
+			
 	    }
 	}
 };
@@ -127,19 +135,33 @@ int main(){
 	string kataAngka;
 	
 	classUbah *angka1 = new classUbah();
-	cout<<"Masukkan Angka yang ingin diubah ke String \t: ";
+	
+	cout << "\n--------------------------------------------------------------" << endl;
+	cout << "\n\t\t\tEXAMPLE ANGKA TO STRING" << endl;
+	angka1->ubah(99);
+	cout<<"\nAngka yang telah di-input \t\t\t: 99\n";
+	angka1->displayMessage();
+	cout << "\n--------------------------------------------------------------" << endl;
+	cout<<"\nMasukkan Angka yang ingin diubah ke String \t: ";
 	cin >>angka;
 	fflush(stdin);
 	angka1->ubah(angka);
 	angka1->displayMessage();
 	
 	cout << "\n--------------------------------------------------------------" << endl;
+	
 	classUbah *string1 = new classUbah();
+	cout << "\n--------------------------------------------------------------" << endl;
+	cout << "\n\t\t\tEXAMPLE STRING TO ANGKA" << endl;
+	angka1->ubah("Enam Sembilan");
+	cout<<"\nString yang telah di-input \t\t\t: Enam Sembilan\n";
+	angka1->displayMessage2();
+	cout << "\n--------------------------------------------------------------" << endl;
 	cout<<"\nMasukkan String yang ingin diubah ke Angka \t: ";
 	getline(cin, kataAngka);
 	fflush(stdin);
-	angka1->ubah(kataAngka);
-	angka1->displayMessage2();
+	string1->ubah(kataAngka);
+	string1->displayMessage2();
 	
 	return 0;
 }
